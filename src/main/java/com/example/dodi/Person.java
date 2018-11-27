@@ -2,7 +2,6 @@ package com.example.dodi;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.transaction.annotation.Transactional;
 
 
 /**
@@ -15,8 +14,7 @@ public class Person {
     private Integer age;
 
     @Autowired
-    @Trans
-    private LoveRepository loveRepository;
+    private transient LoveRepository loveRepository;
 
     public Person(String name, Integer age) {
         this.name = name;
